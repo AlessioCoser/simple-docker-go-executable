@@ -8,16 +8,16 @@ docker build -t simple-docker-go-executable .
 
 ### pull image
 ```sh
-docker pull AlessioCoser/simple-docker-go-executable:latest
+docker pull alessiocoser/simple-docker-go-executable:latest
 ```
 
 ### Use image
 Build a minimal image example:
 ```
-docker run --rm -v $(pwd):/go/src/app -it AlessioCoser/simple-docker-go-executable:latest build -ldflags="-s -w" -a -installsuffix cgo -o app .
+docker run --rm -v $(pwd):/go/src/app -it alessiocoser/simple-docker-go-executable:latest build -ldflags="-s -w" -a -installsuffix cgo -o app .
 ```
 
 ### add alias to your shell profile
 ```sh
-alias go="docker run --rm -v $(pwd):/go/src/app -i AlessioCoser/simple-docker-go-executable:latest $@"
+alias go="docker run --rm -v $(pwd):/go/src/app -i alessiocoser/simple-docker-go-executable:latest $@"
 ```
